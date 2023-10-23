@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./img/pokeball.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=VT323&display=swap" rel="stylesheet">
+    <title>Pokedex</title>
+</head>
+
+<body onload="loadPokemonData()">
+    <header>
+        <div id="loadingIcon" class="loading-icon-hidden">
+            <img src="./img/pokeball-2.png" alt="Loading...">
+        </div>
+        <img src="./img/pokeball.png" alt="">
+        <h2 class="schrift">Caramellos Pokedex</h2>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Pokémon suchen...">
+            <button id="searchButton" onclick="searchPokemon()">Suchen</button>
+        </div>
+    </header>
+
+    <div id="loadingIcon" class="loading-icon-hidden">
+        <img src="./img/pokeball-2.png" alt="Loading...">
+    </div>
+
+    <div id="top"></div>
+
+    <div id="pokedex">
+       
+        <canvas id="chart1"></canvas>
+    </div>
+
+    <div class="allBtns">
+        <button id="nextButton" class="btn btn_red d-none" onclick="nextPokemon()">Nächstes Pokemon-Side</button>
+        <div class="loadAnimation">
+            <div id="loading">
+                <div id="normal"></div>
+                <div id="great"></div>
+                <div id="ultra"></div>
+                <div id="master"></div>
+                <div id="safari"></div>
+            </div>
+        </div>
+        <a id="goUp" class="btn btn_red top d-none" href="#top">Nach oben</a>
+    </div>
+
+    <div id="popUpCard" class="d-none">
+        <div class="innerCard">
+            <h1>Pikachu</h1>
+            <img src="./img/pokeball.png" alt="">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

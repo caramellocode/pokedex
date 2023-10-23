@@ -1,0 +1,377 @@
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'pokemonGb';
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #790f6da8;
+  font-family: 'VT323', monospace;
+}
+
+header {
+  min-height: 70px;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 32px;
+  background-color: #c94f54d1;
+  border-bottom: 10px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  font-family: 'moltors';
+  color: white;
+  position: fixed;
+  z-index: 999;
+  padding-bottom: 12px;
+}
+
+.schrift {
+  font-family: 'Bungee Shade', sans-serif;
+  font-size: 35px;
+  border-color: #936E89;
+}
+
+header img {
+  height: 80px;
+}
+
+header h1 {
+  margin-block-start: 24px;
+  margin-block-end: 24px;
+}
+
+#pokedex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 153px;
+  margin-bottom: 32px;
+  padding: 26px;
+  gap: 20px;
+}
+
+.allBtns {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.btn {
+  background-color: #E48681;
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-color: rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  font-family: 'pokemonGb';
+}
+
+.btn:hover {
+  background-color: #DA4F49;
+  border-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.btn.btn-red:active {
+  background-color: #9c58544b;
+  border-color: rgba(0, 0, 0, 0.9);
+}
+
+.top {
+  margin-bottom: 64px !important;
+}
+
+.outerCard {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.card {
+  border: 10px solid #ff8165;
+  border-radius: 32px;
+  display: flex;
+  padding: 20px;
+  height: 350px;
+  width: 200px;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: transform 1.2s;
+  transform-style: preserve-3d;
+  z-index: 999;
+}
+
+.outerCard:hover .card {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.front {
+  justify-content: space-around;
+  
+}
+
+.back {
+  transform: rotateY(180deg);
+  justify-content: space-between !important;
+  display: flex;
+  justify-content: space-around;
+}
+
+.back p {
+  border-bottom: 1px solid black;
+  width: 100%;
+  margin-top: -20px;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 16px;
+  background-color: lightgray;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.typeInfo {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+  gap: 8px;
+}
+
+.stats {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid black;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stats span {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.pdl-10 {
+  padding-left: 10px;
+}
+
+.width-96 {
+  width: 96%;
+}
+
+.card img {
+  height: auto;
+  width: 180px;
+  margin-bottom: 40px;
+}
+
+#loading {
+  height: 48px;
+  width: 264px;
+  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+
+
+
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.bg-green {
+  background-color: #81DE1C;
+}
+
+.bg-bug {
+  background-color: #9eb96e;
+}
+
+.bg-water {
+  background-color: #5FB9DF;
+}
+
+.bg-fire {
+  background-color: #F3B34D !important;
+}
+
+.bg-electro {
+  background-color: #FBFBB5;
+}
+
+.bg-normal {
+  background-color: lightgray;
+}
+
+.bg-poison {
+  background-color: #C189BC;
+}
+
+.bg-ground {
+  background-color: #DC8732;
+}
+
+.bg-fighting {
+  background-color: #F0D7B5;
+}
+
+.bg-psychic {
+  background-color: #936E89;
+}
+
+.bg-fairy {
+  background-color: #FF95C2;
+}
+
+.bg-ice {
+  background-color: #ACD1ED;
+}
+
+.bg-dragon {
+  background-color: #E4C920;
+}
+
+.bg-steel {
+  background-color: #E1E6E8;
+}
+
+.bg-flying {
+  background-color: #5299CD;
+}
+
+@media (max-width: 550px) {
+  header img {
+      display: none;
+  }
+
+  header h2 {
+      display: none;
+  }
+}
+header {
+  background-color: #a4219592; /* Ändern Sie die Farbe nach Ihren Wünschen */
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#searchInput {
+  padding: 5px;
+  border: none;
+  border-radius: 12px;
+  width: 200px;
+  margin-right: 5px;
+}
+
+#searchButton {
+  margin-right: 11px;
+  border-radius: 10px;
+  background-color: burlywood;
+}
+
+
+
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1; /* Das Eingabefeld dehnt sich aus, um den verfügbaren Platz auszufüllen */
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-bug {
+  background-color: #A8B820;
+}
+
+.bg-water {
+  background-color: #6890F0;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Leicht transparenter Hintergrund */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Stellen Sie sicher, dass das Overlay über allem liegt */
+}
+
+.expanded-card {
+  transform: scale(1.5); /* Vergrößerung um 50% */
+  transition: transform 0.3s ease; /* Animation für die Vergrößerung */
+  z-index: 1001; /* Stellen Sie sicher, dass die Karte über dem Overlay liegt */
+}
+
+.loading-icon-hidden {
+  display: none;
+}
+
+.loading-icon-visible {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Stellen Sie sicher, dass es über anderen Elementen liegt */
+}
+
+
+@keyframes spin {
+  from { transform:rotate(0deg); }
+  to { transform:rotate(360deg); }
+}
+
+.loading-icon-visible img {
+  animation: spin 2s linear infinite;
+}
